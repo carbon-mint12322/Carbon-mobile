@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "EvCapture (Staging)",
+    "owner": "carbonmint",
+    "slug": "CarbonMint",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-camera",
+      "expo-image-picker",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "expo-localization"
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 6000,
+      "url": "https://u.expo.dev/0cdf9e00-30db-4274-ab00-687d0bde6e9b"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rajan-rv.CarbonMint",
+      "googleServicesFile": "./google-services.json",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos.",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos."
+      }
+    },
+    "android": {
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDLXNnFU8g68zfD6atZUz83wMmFrknfncg"
+        }
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.MEDIA_LIBRARY",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.rajan_rv.CarbonMint",
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0cdf9e00-30db-4274-ab00-687d0bde6e9b"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    }
+  }
+}
